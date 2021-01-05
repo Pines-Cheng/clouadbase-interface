@@ -1,5 +1,5 @@
 {
-  "name": "@o2team/cloudbase-interface",
+  "name": "cloudbase-interface",
   "version": "1.0.0",
   "description": "ide json rpc standard",
   "main": "index.js",
