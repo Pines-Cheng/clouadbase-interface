@@ -1,0 +1,46 @@
+{
+  "name": "@o2team/cloudbase-interface",
+  "version": "1.0.0",
+  "description": "ide json rpc standard",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "run-s clean prod",
+    "dev": "npm run clean && tsc -w",
+    "prod": "tsc",
+    "clean": "rimraf dist",
+    "postclean": "mkdir dist",
+    "lint": "tslint src/**/*.ts --fix",
+    "lint:typecheck": "tslint -p tsconfig.json src/**/*.ts --fix",
+    "prepack": "npm run build",
+    "example:server": "babel-node ./example/server.js",
+    "example:client": "webpack-dev-server --config ./example/config/webpack.config.js",
+    "example": "run-p example:server example:client",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.jd.com/taro/taro-ide.git"
+  },
+  "keywords": ["json", "rpc", "protocol"],
+  "author": "taro",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "events": "^3.2.0",
+    "lodash": "4.17.20",
+    "node-pty": "^0.9.0",
+    "opn": "^6.0.0",
+    "os": "^0.1.1",
+    "sockjs": "^0.3.21",
+    "sockjs-client": "^1.5.0",
+    "url": "^0.11.0",
+    "xterm": "^4.8.1",
+    "xterm-addon-web-links": "^0.4.0"
+  }
+}

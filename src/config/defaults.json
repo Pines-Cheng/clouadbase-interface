@@ -1,0 +1,5 @@
+{
+  "HOST": "localhost",
+  "PORT": 9222,
+  "PATH": "/ws/ide"
+}
