@@ -5,7 +5,7 @@
 主要包括：
 
 1. 协议：Taro CloudBase Protocol
-2. 接口：taro-cloudbase-interface（分为 client 和 server）
+2. 接口：cloudbase-interface（分为 client 和 server）
 
 ### 使用
 
@@ -242,34 +242,6 @@ TS 类型文件也是通过脚本读取 JSON 文件生成的：[protocol_dts_gen
 ```
 ⬇️{"error":{"code":-32000,"message":"Not supported"},"id":20}
 ```
-
-#### 错误码定义
-
-参考 HTTP？
-
-### Domain 划分
-
-按业务、平台、抽象三个维度，分为两大类：
-
-1. 公共业务的：如 project，deploy。
-2. 抽象的，如 fle，shell。
-3. 可能存在不同平台特有的。
-
-示例：
-
-- project
-  _ build
-  _ update
-  _ addPage
-  _ addPackage
-- deploy
-  _ push
-  _ revert
-- file （抽象）
-  _ read
-  _ write
-- shell \*
-- app（IDE 特有） \* update
 
 ## TODO
 
