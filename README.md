@@ -14,6 +14,9 @@
 参考 [chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface) 进行封装，接口优雅，异步编程。
 
 ```js
+
+const getClient = require('clouadbase-interface/dist/client').default
+
 async function example() {
   let client
   try {
@@ -57,7 +60,7 @@ example()
 ```js
 var http = require('http')
 var sockjs = require('sockjs')
-var Server = require('../dist/server').default
+var Server = require('clouadbase-interface/dist/server').default
 
 var echo = sockjs.createServer()
 
